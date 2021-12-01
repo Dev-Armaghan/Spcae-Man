@@ -363,8 +363,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 480162640}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.06, y: -0.01, z: 0}
-  m_LocalScale: {x: 0.5855928, y: 0.246077, z: 1}
+  m_LocalPosition: {x: 13.2598, y: -0.01, z: 0}
+  m_LocalScale: {x: 1.3074389, y: 0.246077, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -584,8 +584,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1097235010}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.67589736, y: 0.03, z: -0.79826367}
-  m_LocalScale: {x: 1, y: 0.85, z: 1}
+  m_LocalPosition: {x: 0.75, y: 0.03, z: -0.79826367}
+  m_LocalScale: {x: 1.15, y: 0.85, z: 1}
   m_Children:
   - {fileID: 1304353285}
   - {fileID: 161529000}
@@ -604,6 +604,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1115943656}
   - component: {fileID: 1115943657}
+  - component: {fileID: 1115943658}
   m_Layer: 0
   m_Name: stoneWall (2)
   m_TagString: Untagged
@@ -676,6 +677,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1115943658
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1115943655}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: dcb36b9db957c444bb1126fc406e9556, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1304353284
 GameObject:
   m_ObjectHideFlags: 0
@@ -770,6 +790,8 @@ GameObject:
   - component: {fileID: 1389890374}
   - component: {fileID: 1389890373}
   - component: {fileID: 1389890372}
+  - component: {fileID: 1389890376}
+  - component: {fileID: 1389890377}
   m_Layer: 0
   m_Name: hero
   m_TagString: Untagged
@@ -975,9 +997,41 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1389890371}
   m_LocalRotation: {x: -0, y: -0, z: -0.022081483, w: 0.9997562}
-  m_LocalPosition: {x: -9.25, y: -1.978805, z: 0}
-  m_LocalScale: {x: 0.6886, y: 0.6664, z: 1}
+  m_LocalPosition: {x: -8.92, y: -2.3059, z: 0}
+  m_LocalScale: {x: 0.57883716, y: 0.54404896, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -2.531}
+--- !u!114 &1389890376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1389890371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a74bc66825bf5548828ccaee4785302, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  upForce: 10
+--- !u!95 &1389890377
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1389890371}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8fa4808b4d3d48b4994add52f99d456c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
