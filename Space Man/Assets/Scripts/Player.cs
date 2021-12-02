@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class Player : MonoBehaviour
 {
@@ -8,10 +9,15 @@ public class Player : MonoBehaviour
     private bool onGround;
 
     public Animator playerAnimation;
+    public AudioClip landSound;
+
+
+    private AudioSource playerAudio;
     private Rigidbody2D rb;
     // Start is called before the first frame update
     void Start()
     {
+        playerAudio = GetComponent<AudioSource>();
         rb = GetComponent<Rigidbody2D>();
         playerAnimation = GetComponent<Animator>();
     }
@@ -36,6 +42,7 @@ public class Player : MonoBehaviour
         if(collision.gameObject.CompareTag("Ground"))
         {
             playerAnimation.SetBool("Flying", false);
+            playerAudio.PlayOneShot(landSound, 1.0f);
         }
     }
 
