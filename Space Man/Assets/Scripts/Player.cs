@@ -3,10 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 
-public class Player : MonoBehaviour
+public class Player : GameManager
 {
     public float upForce;
-    private bool onGround;
 
     public Animator playerAnimation;
     public AudioClip landSound;
