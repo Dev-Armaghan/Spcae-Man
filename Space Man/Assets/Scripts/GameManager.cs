@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager GM; // creating game manager instance
+
     public float moveLeftSpeed=10;
     private Vector3 startPosition;
     
@@ -11,38 +13,42 @@ public class GameManager : MonoBehaviour
     public GameObject spawnManagerReference;
 
     SpawnManager spawnManager;
-    // Start is called before the first frame update
+
+    private void Awake()
+    {
+        GM = this;
+    }
+    
     void Start()
     {
         startPosition.x = transform.position.x;
         spawnManager = spawnManagerReference.GetComponent<SpawnManager>();
-        SpawnEnemy();
+        StartCoroutine(spawnManager.SpawnAfterInterval());
     }
 
-    // Update is called once per frame
+
     void Update()
     {
         RepeatBackground();
     }
 
+    #region repeating backgrond
     void RepeatBackground()
     {
         //background.transform.Translate(new Vector3( -1, 0, 0) * moveLeft * Time.deltaTime);
         MoveLeft(background);
-        if(background.transform.position.x < startPosition.x -  20)
+        if(background.transform.position.x < startPosition.x -  12)
         {
             background.transform.position = startPosition;
         }
     }
+    #endregion
 
-    void MoveLeft(GameObject toMoveLeft)
+    public void MoveLeft(GameObject toMoveLeft)
     {
         toMoveLeft.transform.Translate(new Vector3(-1, 0, 0) * moveLeftSpeed * Time.deltaTime);
     }
 
-    void SpawnEnemy()
-    {
-        StartCoroutine(spawnManager.SpawnAfterInterval());
-        MoveLeft(spawnManager.spawnedEnemy);
-    }
+
+    
 }

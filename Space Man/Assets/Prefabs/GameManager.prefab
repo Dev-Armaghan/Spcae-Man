@@ -43,6 +43,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc332e51482b0d14b922414ea29b210e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveLeftSpeed: 10
+  moveLeftSpeed: 20
   background: {fileID: 8892983405430590323, guid: 38d4957a2a359e847b438ca2901e927f, type: 3}
   spawnManagerReference: {fileID: 4903828953508136965, guid: 5586d2a3a925b0b4cb9c420bfda65c97, type: 3}
