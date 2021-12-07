@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 
-public class Player : GameManager
+public class Player : MonoBehaviour
 {
     public float upForce;
 
