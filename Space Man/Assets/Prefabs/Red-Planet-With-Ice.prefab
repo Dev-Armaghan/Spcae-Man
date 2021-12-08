@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6140627495403225886}
   - component: {fileID: 1511027671341812845}
+  - component: {fileID: -8022255656420863873}
+  - component: {fileID: 3350817767139946960}
   m_Layer: 0
   m_Name: Red-Planet-With-Ice
   m_TagString: Untagged
@@ -82,3 +84,31 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-8022255656420863873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6498674890166072471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2779ee50f1f785f4bbc7ced13f1c0734, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!58 &3350817767139946960
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6498674890166072471}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 4.23

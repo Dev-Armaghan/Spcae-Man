@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5165550075105795447}
   - component: {fileID: 2252922847194900349}
+  - component: {fileID: 6069538589979734677}
+  - component: {fileID: 2909923140549361178}
   m_Layer: 0
   m_Name: Orange-Planet
   m_TagString: Untagged
@@ -82,3 +84,31 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6069538589979734677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5508036538767946048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2779ee50f1f785f4bbc7ced13f1c0734, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!58 &2909923140549361178
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5508036538767946048}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 4.15

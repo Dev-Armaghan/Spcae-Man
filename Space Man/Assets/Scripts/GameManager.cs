@@ -6,7 +6,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager GM; // creating game manager instance
 
-    public float moveLeftSpeed=10;
+    public float moveLeftSpeed=5;
     private Vector3 startPosition;
     
     public GameObject background;
@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
     {
         startPosition.x = transform.position.x;
         spawnManager = spawnManagerReference.GetComponent<SpawnManager>();
-        StartCoroutine(spawnManager.SpawnAfterInterval());
+        
     }
 
 

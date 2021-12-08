@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5260095687296899635}
   - component: {fileID: 6287436509137005964}
+  - component: {fileID: 3700271668980516544}
+  - component: {fileID: 682455874295009269}
   m_Layer: 0
   m_Name: Lava-PLanet
   m_TagString: Untagged
@@ -82,3 +84,31 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &3700271668980516544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8333114503096767478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2779ee50f1f785f4bbc7ced13f1c0734, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!58 &682455874295009269
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8333114503096767478}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 4.13

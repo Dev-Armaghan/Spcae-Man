@@ -8,30 +8,32 @@ public class SpawnManager : MonoBehaviour
 
     private GameObject spawnedEnemy;
 
-    private float enemySpawnTime = 5;  // spawn time for normal enemy
+    private float spawnRate = 3;  // spawn time for normal enemy
+    private float  enemySpawnTime= 3;  // spawn time for normal enemy
     private float enemyYRange = 2.35f;
 
 
     // Start is called before the first frame update
     void Start()
     {
-
+        InvokeRepeating("SpawnNormalEnemy", enemySpawnTime, spawnRate);
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        GameManager.GM.MoveLeft(spawnedEnemy);
     }
 
 
-    public IEnumerator SpawnAfterInterval()
+    /*public IEnumerator SpawnAfterInterval()
     {
         yield return new WaitForSeconds(enemySpawnTime);
         SpawnNormalEnemy();
         SpawnAfterInterval();
-        Debug.Log("Coroutine is working");
-    }
+    }*/
+
+    #region Spawning nomral enemy
 
     public void SpawnNormalEnemy()
     {
@@ -41,7 +43,7 @@ public class SpawnManager : MonoBehaviour
 
         spawnedEnemy = Instantiate(enemyPrefab[randomIndex], randomPosition, enemyPrefab[randomIndex].transform.rotation);
 
-        spawnedEnemy.transform.Translate(new Vector2(-1,0) * 20 * Time.deltaTime);
-        //GameManager.GM.MoveLeft(spawnedEnemy);
-    }
+   }
+
+    #endregion
 }
