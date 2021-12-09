@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6287436509137005964}
   - component: {fileID: 3700271668980516544}
   - component: {fileID: 682455874295009269}
+  - component: {fileID: -244816893199227843}
   m_Layer: 0
   m_Name: Lava-PLanet
   m_TagString: Untagged
@@ -112,3 +113,15 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 4.13
+--- !u!114 &-244816893199227843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8333114503096767478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 343c10f53c5f3e74898b875bbe7dc9ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

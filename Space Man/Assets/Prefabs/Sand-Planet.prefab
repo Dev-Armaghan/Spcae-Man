@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2580539524727315132}
   - component: {fileID: 1555059878583531747}
   - component: {fileID: 4699100228120665360}
+  - component: {fileID: -4872660798902796340}
   m_Layer: 0
   m_Name: Sand-Planet
   m_TagString: Untagged
@@ -112,3 +113,15 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 4.17
+--- !u!114 &-4872660798902796340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 421682579036280820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 343c10f53c5f3e74898b875bbe7dc9ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -29,7 +29,7 @@ public class Enemy : MonoBehaviour
     {
         if(collision.CompareTag("Player"))
         {
-            Debug.Log("player Enters");
+            Debug.Log("Game Over");
         }
     }
 }

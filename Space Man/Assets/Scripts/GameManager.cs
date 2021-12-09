@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,11 +9,11 @@ public class GameManager : MonoBehaviour
 
     public float moveLeftSpeed=5;
     private Vector3 startPosition;
-    
+
     public GameObject background;
     public GameObject spawnManagerReference;
 
-    SpawnManager spawnManager;
+    private SpawnManager spawnManager;
 
     private void Awake()
     {
@@ -21,15 +22,20 @@ public class GameManager : MonoBehaviour
     
     void Start()
     {
-        startPosition.x = transform.position.x;
         spawnManager = spawnManagerReference.GetComponent<SpawnManager>();
-        
+        startPosition.x = transform.position.x;
     }
 
 
     void Update()
     {
         RepeatBackground();
+        MoveEnimies();
+    }
+
+    private void MoveEnimies()
+    {
+        spawnManager.SpawnNormalEnemy();
     }
 
     #region repeating backgrond

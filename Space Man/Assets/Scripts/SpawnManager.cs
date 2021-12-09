@@ -10,7 +10,7 @@ public class SpawnManager : MonoBehaviour
 
     private float spawnRate = 3;  // spawn time for normal enemy
     private float  enemySpawnTime= 3;  // spawn time for normal enemy
-    private float enemyYRange = 2.35f;
+    private float enemyYRange = 2.3f;
 
 
     // Start is called before the first frame update
@@ -22,7 +22,7 @@ public class SpawnManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        GameManager.GM.MoveLeft(spawnedEnemy);
+        
     }
 
 
@@ -41,7 +41,7 @@ public class SpawnManager : MonoBehaviour
 
         Vector2 randomPosition = new Vector2(11, Random.Range(-enemyYRange, enemyYRange + 1));
 
-        spawnedEnemy = Instantiate(enemyPrefab[randomIndex], randomPosition, enemyPrefab[randomIndex].transform.rotation);
+        Instantiate(enemyPrefab[randomIndex], randomPosition, enemyPrefab[randomIndex].transform.rotation);
 
    }
 
