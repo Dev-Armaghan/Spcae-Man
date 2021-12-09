@@ -29,6 +29,7 @@ public class Enemy : MonoBehaviour
     {
         if(collision.CompareTag("Player"))
         {
+            GameManager.GM.gameOver = true;
             Debug.Log("Game Over");
         }
     }

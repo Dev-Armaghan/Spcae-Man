@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager GM; // creating game manager instance
 
+    public bool gameOver;
     public float moveLeftSpeed=5;
     private Vector3 startPosition;
 
