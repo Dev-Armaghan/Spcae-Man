@@ -5,6 +5,9 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     float xDestroyLocation = -15;
+
+
+ 
     // Start is called before the first frame update
     void Start()
     {

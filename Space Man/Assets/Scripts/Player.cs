@@ -25,6 +25,10 @@ public class Player : MonoBehaviour
     void Update()
     {
         MovePlayer();
+        if(GameManager.GM.gameOver == true)
+        {
+            playerAnimation.SetBool("GameOver", true);
+        }
     }
 
     void MovePlayer()

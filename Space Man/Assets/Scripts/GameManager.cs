@@ -30,14 +30,14 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
+        if(gameOver == false)
+        {
         RepeatBackground();
-        MoveEnimies();
+        }
+        
     }
 
-    private void MoveEnimies()
-    {
-        spawnManager.SpawnNormalEnemy();
-    }
+    
 
     #region repeating backgrond
     void RepeatBackground()
