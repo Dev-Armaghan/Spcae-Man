@@ -2,6 +2,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -13,8 +15,8 @@ public class GameManager : MonoBehaviour
 
     public GameObject background;
     public GameObject spawnManagerReference;
+    public GameObject gameOverUI;
 
-    private SpawnManager spawnManager;
 
     private void Awake()
     {
@@ -23,7 +25,7 @@ public class GameManager : MonoBehaviour
     
     void Start()
     {
-        spawnManager = spawnManagerReference.GetComponent<SpawnManager>();
+        
         startPosition.x = transform.position.x;
     }
 
@@ -33,6 +35,10 @@ public class GameManager : MonoBehaviour
         if(gameOver == false)
         {
         RepeatBackground();
+        }
+        else
+        {
+            gameOverUI.gameObject.SetActive(true);
         }
         
     }
@@ -56,6 +62,9 @@ public class GameManager : MonoBehaviour
         toMoveLeft.transform.Translate(new Vector3(-1, 0, 0) * moveLeftSpeed * Time.deltaTime);
     }
 
-
+    public void RestartGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
     
 }
