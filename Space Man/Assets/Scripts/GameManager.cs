@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
@@ -12,6 +13,8 @@ public class GameManager : MonoBehaviour
     public bool gameOver;
     public float moveLeftSpeed=5;
     private Vector3 startPosition;
+    private Button button;
+
 
     public GameObject background;
     public GameObject spawnManagerReference;
@@ -26,13 +29,14 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         
-        startPosition.x = transform.position.x;
+        startPosition.x = transform.position.x; // to get the reference of the background to make it repeat
+        button = GetComponent<Button>();
     }
 
 
     void Update()
     {
-        if(gameOver == false)
+        if(gameOver == false) //untill the game is over background will repeat.
         {
         RepeatBackground();
         }
@@ -57,7 +61,7 @@ public class GameManager : MonoBehaviour
     }
     #endregion
 
-    public void MoveLeft(GameObject toMoveLeft)
+    public void MoveLeft(GameObject toMoveLeft)  // to make the objects go from left too right.
     {
         toMoveLeft.transform.Translate(new Vector3(-1, 0, 0) * moveLeftSpeed * Time.deltaTime);
     }
@@ -66,5 +70,10 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
-    
+
+    void SetDifficulty()
+    {
+
+    }
+
 }
